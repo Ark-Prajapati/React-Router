@@ -1,0 +1,29 @@
+1. install library.
+
+2. copy header tailwind code from github (of Header)
+
+    inside it, is link and navLink. what are they? 
+    things you get with the router library. you have to import it from the library (import {link, navlink from react router dom})
+
+    link, used in place of 'a' tag.
+    'a' tag, when used, whole page is refreshed. In react there is not concept like that, DOM just goes and values are injected.
+    instead of 'a', we use 'to' here
+
+3.  NavLink, gives additional things.
+    the className inside navlink, it has a callback function. 
+    color highlighting on links based on where the page user is. to do that, its used. 
+    then we manipulate the classes. how?
+    u get access to a variable called {isActive}. inject it in the code (do see where you inject it), and write it such that if its true then this or else this.
+    navlink then would tell you if the page you are in is active or not.
+
+4. 3 components are build. in src, 3 folders, in each one, their respective file, and tailwind code copied from github.
+
+5. we won't be returning the app.jsx.
+    in main.jsx, we were rendering app.jsx, instead of it, do routerProvider. it needs router.
+
+6. creating router
+
+what we want, header and footer to stay same. home, different componet, contact us, then diff one.
+one way, call headder in each component. not a optimised way
+
+other way, a new file, Layout.jsx, in src.
